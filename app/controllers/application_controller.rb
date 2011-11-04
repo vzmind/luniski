@@ -3,8 +3,10 @@ class ApplicationController < ActionController::Base
   before_filter :check_sfdc
   
   def check_sfdc
-    if ENV['sfdc_token'].nil?
-      redirect_to "/auth/forcedotcom"
+    unless params[:provider] == "forcedotcom"
+      if ENV['sfdc_token'].nil?
+        redirect_to "/auth/forcedotcom"
+      end
     end 
   end
 end

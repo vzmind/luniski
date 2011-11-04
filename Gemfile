@@ -6,7 +6,6 @@ gem 'json'
 gem 'databasedotcom'
 gem 'jquery-rails'
 gem 'omniauth', "~> 0.2.4"
-#gem 'omniauth-oauth2', :git => 'git://github.com/intridea/omniauth-oauth2.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,8 +16,6 @@ group :assets do
 end
 
 group :development do
-  gem 'rack-ssl-enforcer', :require => 'rack/ssl-enforcer'
-  gem 'thin'
   gem 'heroku'
   gem 'rspec-rails'
   gem 'ruby-debug19', :require => 'ruby-debug'
@@ -26,7 +23,6 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem 'capybara'
 end
 
 group :production do
