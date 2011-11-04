@@ -5,6 +5,8 @@ EvDemo::Application.routes.draw do
   match '/auth/failure', :to => "sessions#fail"
   match '/session/login', :to => "sessions#login"
 
+  resources :home
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

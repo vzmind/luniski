@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     @client.authenticate :token => ENV['sfdc_token'], :instance_url => ENV['sfdc_instance_url'] 
 
     #debug output
-    render :text => request.env['omniauth.auth'].inspect
+    redirect_to '/home'
   end
 
   def login
