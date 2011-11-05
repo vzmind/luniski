@@ -16,6 +16,8 @@ end
 
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :forcedotcom, '3MVG9PhR6g6B7ps6in8a_o8S1Ip1iiDMK828FkdlmF4XnBbv9Ek6CXfSjQzji5eJimP4yOWPS76bmJcZidCFP', '2041292024636461725'
+  # connection to old org
+  #provider :forcedotcom, '3MVG9PhR6g6B7ps6in8a_o8S1Ip1iiDMK828FkdlmF4XnBbv9Ek6CXfSjQzji5eJimP4yOWPS76bmJcZidCFP', '2041292024636461725'
+  provider :forcedotcom, '3MVG9QDx8IX8nP5RirhqQ1R8GjMpb7AFTFW5nuMKiw7eGYugiyRPrBHHrHRIcMPHu2caVhuwjb2fBmuGWMZQs', '8086027360834568335'
 end
 

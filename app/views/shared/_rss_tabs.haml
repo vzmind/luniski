@@ -1,0 +1,24 @@
+.widget
+  .tabs
+    .tab_wrap
+      %ul.nav
+        %li.first.tab_nav_1
+          %a{:href => "#tabs-1"} Best practices
+        %li.tab_nav_2
+          %a{:href => "#tabs-2"} Social Media
+        %li.tab_nav_3
+          %a{:href => "#tabs-3"} Targetting
+        %li.last.tab_nav_4
+          %a{:href => "#tabs-4"} News
+      #tabs-1.tab
+        = parse_feed("http://blog.emailvision.com/taxonomy/term/183/0/feed")
+      #tabs-2.tab
+        = parse_feed("http://blog.emailvision.com/taxonomy/term/25/0/feed")
+      #tabs-3.tab
+        = parse_feed("http://blog.emailvision.com/taxonomy/term/20/0/feed")
+      #tabs-4.tab
+        = parse_feed("http://blog.emailvision.com/taxonomy/term/181/0/feed")
+    / tab_wrap
+  / tabs
+/ widget
+

@@ -7,6 +7,7 @@ gem 'haml'
 gem 'sass'
 gem 'databasedotcom'
 gem 'jquery-rails'
+gem 'feed-normalizer'
 gem 'omniauth', "~> 0.2.4"
 
 # Gems used only for assets and not required

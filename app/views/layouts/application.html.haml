@@ -2,406 +2,24 @@
 %html{:lang => "en"}
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
-    %title Repro HTML Template
+    %title EmailVision Customer Portal
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
     = stylesheet_link_tag    "style"
+    = javascript_include_tag "/assets/superfish.js"
+    = javascript_include_tag "/assets/jquery.coda-slider-2.0.js"
+    = javascript_include_tag "/assets/jquery.easing.1.3.js"
+    = javascript_include_tag "/assets/jquery.easing.1.3.js"
+    = javascript_include_tag "/assets/jquery.poshytip.min.js"
+    = javascript_include_tag "/assets/jquery-ui-1.8.5.custom.min.js"
+    = javascript_include_tag "/assets/custom.js"
     /[if IE 6]
       <link rel="stylesheet" href="css/ie.css" />
-    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
   %body
-    #header
-      #top
-        .container_12
-          .grid_3
-            #rss
-              %span Subscribe
-              by
-              %a{:href => "http://feeds.feedburner.com/premiumpixels"} RSS
-              or
-              %a{:href => "http://feedburner.google.com/fb/a/mailverify?uri=premiumpixels"} Email
-            / rss
-          / grid_3
-          .grid_9
-            #second_nav
-              %ul.sf-menu
-                %li
-                  %a{:href => "index.html"} Homepage
-                %li
-                  %a{:href => "single.html"} Post Page
-                %li
-                  %a{:href => "#"} Dropdowns
-                  %ul
-                    %li.first
-                      %a{:href => "#"} Dropdown one
-                    %li
-                      %a{:href => "#"} Dropdown two
-                    %li.last
-                      %a{:href => "#"} Dropdown three
-                %li
-                  %a{:href => "fullwidth.html"} Full Width
-                %li
-                  %a{:href => "archive.html"} Archives
-                %li
-                  %a{:href => "contact.php"} Contact
-                %li
-                  %a{:href => "http://www.premiumpixels.com/repro-html"} Buy this template
-                %li.last
-                  %a{:href => "http://www.premiumpixels.com/repro"} View the WordPress version
-            / second_nav
-          / grid_9
-          .clear
-        / container_12
-      / top
-      #bottom
-        .container_12
-          .grid_5
-            #logo
-              %a{:href => "index.html"}
-                = image_tag "/images/logo.png"
-            / logo
-          / grid_5
-          .grid_7
-            #header_advert
-              %a{:href => "#"}
-                = image_tag '/images/header_advert.jpg'
-            / header_advert
-          / grid_7
-          .grid_12
-            #nav
-              %ul.sf-menu
-                %li.first
-                  %a{:href => "#"} Home
-                %li
-                  %a{:href => "#"} Culture
-                %li
-                  %a{:href => "#"} Lifestyle
-                %li
-                  %a{:href => "#"} World News
-                %li
-                  %a{:href => "#"} Sport
-                %li
-                  %a{:href => "#"} Travel
-                %li
-                  %a{:href => "#"} Health
-                %li
-                  %a{:href => "#"} Finance
-                %li
-                  %a{:href => "#"} Dropdowns
-                  %ul
-                    %li.first
-                      %a{:href => "#"} Dropdown one
-                    %li
-                      %a{:href => "#"} Dropdown two
-                    %li.last
-                      %a{:href => "#"} Dropdown three
-              .clear
-            / nav
-          / grid_12
-          .clear
-        / container_12
-      / bottom
-    / header
+    = render 'shared/header'
     #the_body
       .container_12
         .grid_8
-          #slider
-            #coda_slider
-              .item
-                #coda-slider-1.coda-slider.preload
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        = image_tag '/images/slider_pic_large.jpg'
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        = image_tag '/images/images/slider_pic_large.jpg'
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .panel
-                    .slider_image
-                      %a{:href => "#"}
-                        %img{:alt => "slider large image", :src => "/images/slider_pic_large.jpg"}/
-                    / slider_image
-                    .details
-                      .cats
-                        %span featured
-                      / cats
-                      .header
-                        %h2
-                          %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      / header
-                      .date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                      / date
-                      .excerpt
-                        %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                      / excerpt
-                    / details
-                  / panel
-                  .clear
-                / coda-slider
-                .clear
-              / item
-              .clear
-            / coda_slider
-            #slider_nav
-              #coda-nav-1.coda-nav
-                %ul
-                  %li.tab1
-                    %a{:href => "#1"}
-                      %img{:alt => "thumb", :height => "60", :src => "/images/slider_thumb.jpg", :width => "85"}/
-                  %li.tab2
-                    %a{:href => "#2"}
-                      %img{:alt => "thumb", :height => "60", :src => "/images/slider_thumb.jpg", :width => "85"}/
-                  %li.tab3
-                    %a{:href => "#3"}
-                      %img{:alt => "thumb", :height => "60", :src => "/images/slider_thumb.jpg", :width => "85"}/
-                  %li.tab4
-                    %a{:href => "#4"}
-                      %img{:alt => "thumb", :height => "60", :src => "/images/slider_thumb.jpg", :width => "85"}/
-                  %li.tab5
-                    %a{:href => "#5"}
-                      %img{:alt => "thumb", :height => "60", :src => "/images/slider_thumb.jpg", :width => "85"}/
-                  %li.tab6
-                    %a{:href => "#6"}
-                      %img{:alt => "thumb", :height => "60", :src => "/images/slider_thumb.jpg", :width => "85"}/
-              / coda-nav-5
-            / slider_nav
-            .clear
-          / slider
+          = render 'shared/slider'
           .grid_8.alpha.omega
             .post_columns
               %h4
@@ -409,7 +27,7 @@
               .column
                 .image
                   %a{:href => "#"}
-                    %img{:alt => "post column pic", :src => "/images/post_column_pic.jpg"}/
+                    %img{:alt => "post column pic", :src => "/assets/post_column_pic.jpg"}/
                 %h3
                   %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
                 .date
@@ -425,7 +43,7 @@
               .column
                 .image
                   %a{:href => "#"}
-                    %img{:alt => "post column pic", :src => "/images/post_column_pic.jpg"}/
+                    %img{:alt => "post column pic", :src => "/assets/post_column_pic.jpg"}/
                 %h3
                   %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
                 .date
@@ -441,7 +59,7 @@
               .column.last
                 .image
                   %a{:href => "#"}
-                    %img{:alt => "post column pic", :src => "/images/post_column_pic.jpg"}/
+                    %img{:alt => "post column pic", :src => "/assets/post_column_pic.jpg"}/
                 %h3
                   %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
                 .date
@@ -458,95 +76,16 @@
             / post_columns
           / grid_8 alpha omega
           .grid_8.alpha.omega
-            .post_grid
-              %h4
-                %span Post Grid
-              %ul
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li.last
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %li.last
-                  %a.tooltip{:href => "#", :title => "Post Title"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-            / post_grid
-          / grid_8 alpha omega
-          .grid_8.alpha.omega
             .grid_4.alpha
               .category_list
                 %h4
                   %span
-                    %a{:href => "#"} Category
+                    %a{:href => "#"} My recent cases
                 %ul
                   %li
                     .image
                       %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
+                        %img{:alt => "category pic", :src => "/assets/category_pic.jpg"}/
                     / image
                     .details
                       %h5
@@ -558,14 +97,14 @@
                   %li.last
                     .image
                       %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
+                        %img{:alt => "category pic", :src => "/assets/category_pic.jpg"}/
                     / image
                     .details
                       %h5
                         %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
                       %span.date
                         August 4 2010,
-                        %a{:href => "#"} 8 Comments
+                        %a{:href => "#"} 2 Comments
                     / details
               / category_list
             / grid_4
@@ -573,574 +112,40 @@
               .category_list
                 %h4
                   %span
-                    %a{:href => "#"} Category
+                    %a{:href => "#"} My recent ideas
                 %ul
                   %li
                     .image
                       %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
+                        %img{:alt => "category pic", :src => "/assets/category_pic.jpg"}/
                     / image
                     .details
                       %h5
                         %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
                       %span.date
                         August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
+                        %a{:href => "#"} 5 points
                     / details
                   %li.last
                     .image
                       %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
+                        %img{:alt => "category pic", :src => "/assets/category_pic.jpg"}/
                     / image
                     .details
                       %h5
                         %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
                       %span.date
                         August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-              / category_list
-            / grid_4
-          / grid_8 alpha omega
-          .grid_8.alpha.omega
-            .grid_4.alpha
-              .category_list
-                %h4
-                  %span
-                    %a{:href => "#"} Category
-                %ul
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li.last
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-              / category_list
-            / grid_4
-            .grid_4.omega
-              .category_list
-                %h4
-                  %span
-                    %a{:href => "#"} Category
-                %ul
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
-                    / details
-                  %li.last
-                    .image
-                      %a{:href => "#"}
-                        %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                    / image
-                    .details
-                      %h5
-                        %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little Invaders
-                      %span.date
-                        August 4 2010,
-                        %a{:href => "#"} 8 Comments
+                        %a{:href => "#"} 2 points
                     / details
               / category_list
             / grid_4
           / grid_8 alpha omega
         / grid_8
         .grid_4
-          #sidebar
-            .widget
-              %form{:action => "#"}
-                %input{:name => "s", :type => "text", :value => "to search, type and hit enter"}
-            / widget
-            .widget
-              .rss_widget
-                %span.icon
-                  %a{:href => "#"}
-                    %img{:alt => "rss", :src => "/images/rss_icon.png"}/
-                .details
-                  %a{:href => "#"}
-                    %span.count 436
-                    %span.desc Subscribers
-                / details
-              / rss_widget
-              .twitter_widget
-                %span.icon
-                  %a{:href => "#"}
-                    %img{:alt => "twitter", :src => "/images/twitter_icon.png"}/
-                .details
-                  %a{:href => "#"}
-                    %span.count 347
-                    %span.desc Followers
-                / details
-              / twitter_widget
-            / widget
-            .widget
-              .advert
-                %ul
-                  %li.left
-                    %a{:href => "#"}
-                      %img{:alt => "advert", :src => "/images/advert_125.jpg"}/
-                  %li
-                    %a{:href => "#"}
-                      %img{:alt => "advert", :src => "/images/advert_125.jpg"}/
-                  %li.left
-                    %a{:href => "#"}
-                      %img{:alt => "advert", :src => "/images/advert_125.jpg"}/
-                  %li
-                    %a{:href => "#"}
-                      %img{:alt => "advert", :src => "/images/advert_125.jpg"}/
-              / advert
-            / widget
-            .widget
-              .tabs
-                .tab_wrap
-                  %ul.nav
-                    %li.first.tab_nav_1
-                      %a{:href => "#tabs-1"} Popular
-                    %li.tab_nav_2
-                      %a{:href => "#tabs-2"} Recent
-                    %li.tab_nav_3
-                      %a{:href => "#tabs-3"} Comments
-                    %li.last.tab_nav_4
-                      %a{:href => "#tabs-4"} Tags
-                  #tabs-1.tab
-                    %ul
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li.last
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                  / tab
-                  #tabs-2.tab
-                    %ul
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                      %li.last
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} Fly Fishers Serving as Transports for Noxious Little
-                          %span.date
-                            August 4 2010,
-                            %a{:href => "#"} 8 Comments
-                        / details
-                  / tab
-                  #tabs-3.tab
-                    %ul
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} admin: Fly Fishers Serving as Transports for Noxious Little
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} admin: Fly Fishers Serving as Transports for Noxious Little
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} admin: Fly Fishers Serving as Transports for Noxious Little
-                        / details
-                      %li
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} admin: Fly Fishers Serving as Transports for Noxious Little
-                        / details
-                      %li.last
-                        .image
-                          %a{:href => "#"}
-                            %img{:alt => "category pic", :src => "/images/category_pic.jpg"}/
-                        / image
-                        .details
-                          %h5
-                            %a{:href => "#"} admin: Fly Fishers Serving as Transports for Noxious Little
-                        / details
-                  / tab
-                  #tabs-4.tab.tab_tags
-                    %a{:href => "#"} news
-                    %a{:href => "#"} twitter
-                    %a{:href => "#"} apple
-                    .clear
-                / tab_wrap
-              / tabs
-            / widget
-            .widget
-              %h4
-                %span Video
-              .video
-                %img{:alt => "video", :src => "/images/video.jpg"}
-              / video
-            / widget
-            .widget
-              %h4
-                %span Flickr
-              .flickr
-                %div
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %div
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %div
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                .last
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %div
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %div
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                %div
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-                .last
-                  %a{:href => "#"}
-                    %img{:alt => "post grid image", :src => "/images/post_grid_image.jpg"}/
-              / flickr
-            / widget
-            .widget
-              .half
-                %h4
-                  %span Archive
-                %ul
-                  %li
-                    %a{:href => "#"} January
-                  %li
-                    %a{:href => "#"} February
-                  %li
-                    %a{:href => "#"} March
-                  %li
-                    %a{:href => "#"} April
-                  %li
-                    %a{:href => "#"} May
-                  %li
-                    %a{:href => "#"} June
-                  %li
-                    %a{:href => "#"} July
-                  %li
-                    %a{:href => "#"} August
-                  %li
-                    %a{:href => "#"} September
-                  %li
-                    %a{:href => "#"} October
-                  %li
-                    %a{:href => "#"} November
-                  %li
-                    %a{:href => "#"} December
-              / half
-              .half.last
-                %h4
-                  %span Sponsor
-                .sidebar_ad
-                  %a{:href => "#"}
-                    %img{:alt => "sidebar ad", :src => "/images/sidebar_ad.jpg"}/
-                / sidebar_ad
-              / half
-            / widget
-          / sidebar
+          = render 'shared/sidebar'
         / grid_4
         .clear
       / container_12
     / the_body
-    #footer
-      #footer_border
-      .container_12
-        .grid_3
-          .widget
-            %h4
-              %span About
-            %p
-              Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur,
-              at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his.
-              At vix scripta patrioque scribentur...
-            %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-          / widget
-        / grid_3
-        .grid_3
-          .widget
-            %h4
-              %span Twitter
-            %ul#twitter_update_list
-              %li.first
-                %a{:href => "#"} @laurakalbag
-                I will be very soon. As a result of your previous recommendation on a blog post so it happens :)
-                %a{:href => "#"} 31 minutes ago
-              %li
-                %a{:href => "#"} @laurakalbag
-                you got chocolates!? That's it, I'm signing up.
-                %a{:href => "#"} 37 minutes ago
-              %li.last
-                RT
-                = succeed ":" do
-                  %a{:href => "#"} @tullett
-                Emails that start with "Dear contact" make me feel so special
-                %a{:href => "#"} 50 minutes ago
-            %p
-              %a{:href => "#"} @ormanclark on Twitter
-          / widget
-        / grid_3
-        .grid_3
-          .widget
-            %h4
-              %span About
-            %p
-              Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur,
-              at pro fugit verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his.
-              At vix scripta patrioque scribentur...
-            %p Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-          / widget
-        / grid_3
-        .grid_3
-          .widget
-            %p.right
-              %img{:alt => "logo", :src => "/images/footer_logo.png"}/
-          / widget
-        / grid_3
-        .clear
-      / container_12
-      #footer_bottom
-        .container_12
-          .grid_6
-            %p
-              Copyright 2010
-              = succeed "." do
-                %a{:href => "#"} Repro
-              All Rights Reserved.
-          / grid_6
-          .grid_6
-            %p.right
-              %a{:href => "http://www.premiumpixels.com/repro-html"} Repro Template
-              by
-              %a{:href => "http://www.premiumpixels.com"} Orman
-          / grid_6
-          .clear
-        / container_12
-      / footer_bottom
-    / footer
-    %script{:src => "js/superfish.js", :type => "text/javascript"}
-    %script{:src => "js/jquery.coda-slider-2.0.js", :type => "text/javascript"}
-    %script{:src => "js/jquery.easing.1.3.js", :type => "text/javascript"}
-    %script{:src => "js/jquery.easing.1.3.js", :type => "text/javascript"}
-    %script{:src => "js/jquery.poshytip.min.js", :type => "text/javascript"}
-    %script{:src => "js/jquery-ui-1.8.5.custom.min.js", :type => "text/javascript"}
-    %script{:src => "js/custom.js", :type => "text/javascript"}
-
+    = render 'shared/footer'
