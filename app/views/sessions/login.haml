@@ -1,5 +1,8 @@
-.grid_8
+.grid_10
   .login
+    %p
+      %span
+        Welcome on Emailvision customer Portal. Find here all informations you need to use Campaign Commander, find solutions, share your ideas :
     = form_tag('/sessions/signin', :name => 'auth')
     %label Login
     %input{:name => 'auth[login]'}
