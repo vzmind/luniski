@@ -8,7 +8,9 @@ class SessionsController < ApplicationController
   end
 
   def logout
-    session[:token] = nil
+    session[:token]     = nil
+    session[:full_name] = nil
+    session[:user_id]   = nil
     redirect_to '/sessions/login'
   end
 
@@ -21,7 +23,9 @@ class SessionsController < ApplicationController
       soap.xml = r
     end
     @response = @response.to_hash
-    session['token'] =  @response[:login_response][:result][:session_id]
+    session[:token]     = @response[:login_response][:result][:session_id]
+    session[:full_name] = @response[:login_response][:result][:user_info][:user_full_name]
+    session[:user_id]   = @response[:login_response][:result][:user_id]
 
     @client = Databasedotcom::Client.new("config/databasedotcom.yml")
     @client.authenticate :token => ENV['sfdc_token'], :instance_url => ENV['sfdc_instance_url']

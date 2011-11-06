@@ -1,5 +1,7 @@
 #sidebar
   .widget
+    %span= "%s, welcome on Emailvision Portal" % session[:full_name]
+  .widget
     %form{:action => "#"}
       %input{:name => "s", :type => "text", :value => "to search, type and hit enter"}
   / widget
