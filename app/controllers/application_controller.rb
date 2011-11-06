@@ -1,12 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :check_sfdc
+  #before_filter :check_sfdc, :except => [:login]
   
   def check_sfdc
-    unless params[:provider] == "forcedotcom"
-      if ENV['sfdc_token'].nil?
-        redirect_to "/auth/forcedotcom"
-      end
-    end 
+    if ENV['sfdc_token'].nil?
+      redirect_to "/sessions/login"
+    end
   end
 end

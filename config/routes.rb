@@ -3,7 +3,8 @@ EvDemo::Application.routes.draw do
 
   match '/auth/:provider/callback', :to => "sessions#create"
   match '/auth/failure', :to => "sessions#fail"
-  match '/session/login', :to => "sessions#login"
+  match '/sessions/login', :to => "sessions#login"
+  match '/sessions/signin', :to => "sessions#signin"
 
   resources :home
 
