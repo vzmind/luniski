@@ -1,4 +1,6 @@
 EvDemo::Application.routes.draw do
+  root :to => 'home#index'
+  
   get "cases/index"
   get "cases/create"
   get "cases/show"
