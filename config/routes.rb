@@ -1,4 +1,8 @@
 EvDemo::Application.routes.draw do
+  get "cases/index"
+  get "cases/create"
+  get "cases/show"
+
   get "sessions/create"
 
   match '/auth/:provider/callback', :to => "sessions#create"
