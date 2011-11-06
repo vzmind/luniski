@@ -9,13 +9,12 @@ class SessionsController < ApplicationController
 
   def signin
     client = Savon::Client.new do
-      wsdl.document = File.expand_path(Rails.root + "config/wsdl.jsp-new-org-partner.xml", __FILE__)
+      wsdl.document = File.expand_path(Rails.root + "config/wsdl.jsp-new-org.xml", __FILE__)
     end
     @response = client.request :login do
-      soap.header = { "LoginScopeHeader" => {"organizationId" => "00DU0000000K0FF", "portalID" => "060U0000000Trku"}}
-      soap.body = {:username => params['auth']['login'], :password => params['auth']['password'] } # old app 'zMwIiBw646L4sEtfnmXw7zMs'}
+      r = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:urn='urn:enterprise.soap.sforce.com'><soapenv:Header><urn:LoginScopeHeader><urn:organizationId>00DU0000000K0FF</urn:organizationId><urn:portalId>060U0000000Trku</urn:portalId></urn:LoginScopeHeader></soapenv:Header><soapenv:Body><urn:login><urn:username>%s</urn:username><urn:password>%s</urn:password></urn:login></soapenv:Body></soapenv:Envelope>" % [params['auth']['login'],params['auth']['password']]
+      soap.xml = r
     end
-    debugger
     @response = @response.to_hash
     ENV['sfdc_token'] = @response[:login_response][:result][:session_id]
     @client = Databasedotcom::Client.new("config/databasedotcom.yml")
