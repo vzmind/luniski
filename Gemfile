@@ -9,6 +9,7 @@ gem 'databasedotcom'
 gem 'jquery-rails'
 gem 'feed-normalizer'
 gem 'savon'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,7 +30,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
 end
 
 
