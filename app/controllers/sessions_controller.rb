@@ -7,6 +7,11 @@ class SessionsController < ApplicationController
 
   end
 
+  def logout
+    session[:token] = nil
+    redirect_to '/sessions/login'
+  end
+
   def signin
     client = Savon::Client.new do
       wsdl.document = File.expand_path(Rails.root + "config/wsdl.jsp-new-org.xml", __FILE__)
@@ -16,9 +21,11 @@ class SessionsController < ApplicationController
       soap.xml = r
     end
     @response = @response.to_hash
-    ENV['sfdc_token'] = @response[:login_response][:result][:session_id]
+    session['token'] =  @response[:login_response][:result][:session_id]
+
     @client = Databasedotcom::Client.new("config/databasedotcom.yml")
     @client.authenticate :token => ENV['sfdc_token'], :instance_url => ENV['sfdc_instance_url']
+
     redirect_to '/home'
   end
 end

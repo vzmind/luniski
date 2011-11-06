@@ -1,6 +1,9 @@
 .grid_8
-  = form_tag('/sessions/signin', :name => 'auth')
-  %input{:name => 'auth[login]'}
-  %input{:name => 'auth[password]'}
-  %input{:type => 'submit'}
-
+  .login
+    = form_tag('/sessions/signin', :name => 'auth')
+    %label Login
+    %input{:name => 'auth[login]'}
+    %label Password
+    %input{:type => 'password', :name => 'auth[password]'}
+    %input{:type => 'submit'}
+.clear

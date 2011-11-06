@@ -19,10 +19,7 @@
     #the_body
       .container_12
         = yield
-        .grid_4
-          = render 'shared/sidebar'
-        / grid_4
-        .clear
+        = yield :sidebar
       / container_12
     / the_body
     = render 'shared/footer'

@@ -15,4 +15,12 @@ module ApplicationHelper
     content += "</ul>"
     return content.html_safe
   end
+
+  def current_user
+    session[:token] || nil
+  end
+
+  def current_user?
+    !current_user.nil?
+  end
 end
