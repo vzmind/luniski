@@ -27,9 +27,6 @@ class SessionsController < ApplicationController
     session[:full_name] = @response[:login_response][:result][:user_info][:user_full_name]
     session[:user_id]   = @response[:login_response][:result][:user_id]
 
-    @client = Databasedotcom::Client.new("config/databasedotcom.yml")
-    @client.authenticate :token => ENV['sfdc_token'], :instance_url => ENV['sfdc_instance_url']
-
     redirect_to '/home'
   end
 end

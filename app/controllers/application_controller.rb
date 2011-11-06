@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :check_user, :except => [:login]
+  before_filter :check_user, :except => [:login,:signin]
   
   def check_user
     if session[:token].nil?

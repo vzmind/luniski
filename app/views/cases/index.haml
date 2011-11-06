@@ -1,2 +1,30 @@
-<h1>Cases#index</h1>
-<p>Find me in app/views/cases/index.html.erb</p>
+.grid_8
+  .grid_8.alpha.omega
+    .full_posts
+      %ul
+        - @cases.each do |c|
+          %li
+            .image
+              %a
+                = image_tag "/assets/archive_full_pic.jpg"
+            .details
+              %h5
+                %a= c['Subject']
+                %span.status{:class => c['Status'].downcase}= c['Status']
+              %span.date=  c['CreatedDate'].to_date
+              %p
+                = c['Description']
+              %p.actions
+                %a
+                  Show
+                %a
+                  Edit
+                %a
+                  Close
+              .clear
+  .clear
+- content_for :sidebar do
+  .grid_4
+    = render 'shared/sidebar'
+  / grid_4
+  .clear
