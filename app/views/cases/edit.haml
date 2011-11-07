@@ -1,0 +1,31 @@
+.grid_8
+  .grid_8.alpha.omega
+    .full_posts
+      .form
+        = form_tag('/cases/%s' % @case['Id'], :method => :put, :name => 'auth')
+        .field
+          %label Case Number
+          %input{:name => @case['CaseNumber'], :value => @case['CaseNumber']}
+        .field
+          %label Type
+          %input{:name => @case['Type'], :value => @case['Type']}
+        .field
+          %label Reason
+          %input{:name => @case['Reason'], :value => @case['Reason']}
+        .field
+          %label Subject 
+          %input{:name => @case['Subject'], :value => @case['Subject']}
+        .field
+          %label Description 
+          %textarea{:name => @case['Description']}
+            = @case['Description']
+        .field
+          %input{:type => 'submit'}
+
+  .clear
+- content_for :sidebar do
+  .grid_4
+    = render 'shared/sidebar'
+  / grid_4
+  .clear
+
