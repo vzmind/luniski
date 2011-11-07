@@ -75,6 +75,7 @@ GEM
       thor (~> 0.14)
     json (1.6.1)
     launchy (2.0.3)
+    libv8 (3.3.10.2)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
     mail (2.3.0)
@@ -162,6 +163,8 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     term-ansicolor (1.0.7)
+    therubyracer (0.9.8)
+      libv8 (~> 3.3.10)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -180,6 +183,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
   databasedotcom
+  execjs
   factory_girl_rails
   feed-normalizer
   haml
@@ -193,4 +197,5 @@ DEPENDENCIES
   sass
   sass-rails (~> 3.1.4)
   savon
+  therubyracer
   uglifier (>= 1.0.3)
