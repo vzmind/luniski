@@ -23,6 +23,7 @@ class SessionsController < ApplicationController
       soap.xml = r
     end
     @response = @response.to_hash
+
     session[:token]     = @response[:login_response][:result][:session_id]
     session[:full_name] = @response[:login_response][:result][:user_info][:user_full_name]
     session[:user_id]   = @response[:login_response][:result][:user_id]

@@ -3,21 +3,25 @@
     .full_posts
       .form
         = form_tag('/cases/%s' % @case['Id'], :method => :put, :name => 'auth')
+        %input{:type => 'hidden', :name => 'case[Id]', :value => @case['Id']}
         .field
           %label Case Number
-          %input{:name => @case['CaseNumber'], :value => @case['CaseNumber']}
+          %label=  @case['CaseNumber']
         .field
           %label Type
-          %input{:name => @case['Type'], :value => @case['Type']}
+          %input{:name => 'case[Type]', :value => @case['Type']}
         .field
           %label Reason
-          %input{:name => @case['Reason'], :value => @case['Reason']}
+          %input{:name => 'case[Reason]', :value => @case['Reason']}
+        .field
+          %label Status 
+          %input{:name => 'case[Status]', :value => @case['Status']}
         .field
           %label Subject 
-          %input{:name => @case['Subject'], :value => @case['Subject']}
+          %input{:name => 'case[Subject]', :value => @case['Subject']}
         .field
           %label Description 
-          %textarea{:name => @case['Description']}
+          %textarea{:name => 'case[Description]'}
             = @case['Description']
         .field
           %input{:type => 'submit'}
