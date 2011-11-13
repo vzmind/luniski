@@ -3,7 +3,11 @@
   %h2
     My Cases
   .box_content
-    MY CASES
+    %ul
+      - @cases.each do |c|
+        %li
+          %a{:href => edit_case_path(c['Id'])}= c['Subject']
+
   %a.btn-w{:href => "#"} → All my cases
 / /MY CASES BLOCK
 
