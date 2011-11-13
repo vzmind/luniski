@@ -1,23 +1,274 @@
 #header
-  #top
-    %span Bienvenue sur votre plateforme Heroku - SalesForce
-  #bottom
-    .container_12
-      .grid_5
-        #logo
-          %a{:href => "index.html"}
-            = image_tag "/assets/logo.png"
-        / logo
-      / grid_5
-      .grid_7
-        #header_advert
-          %a{:href => "#"}
-            = image_tag '/assets/header_advert.jpg'
-        / header_advert
-      / grid_7
-      = render 'shared/nav'
-      .clear
-    / container_12
-  / bottom
-/ header
+  #logo-title
+    %a#logo{:href => "http://www.emailvision.fr/", :rel => "home", :title => "Solutions Email & Social Marketing"}
+      %h1
+        %img{:alt => "Solutions Email & Social Marketing", :src => "/assets/logo.png"}/
+    #name-and-slogan
+      #site-slogan Marketing as never before
+    / /name-and-slogan
+  / /logo-title
+  .header-haut
+    %ul
+      %li.community
+        %a{:href => "http://blog.emailvision.com", :target => "_blank", :title => "Communauté"} Communauté
+      %li.login
+        %a{:href => "http://www.emailvision.com/CC_logins", :target => "_blank", :title => "Connexion"} Connexion
+      %li.search.noborder
+        Recherche
+        %form#search_form{:action => "/search", :method => "get"}
+          %input{:name => "s", :onFocus => "javascript:this.value=''", :type => "text", :value => ""}
+            %input.btn{:name => "submit", :type => "submit", :value => " "}
+  #header-region
+    #block-emvlangswitch-0.block.block-emvlangswitch.block-header.block-id-297.clearfix.odd
+      .block-inner
+        .content
+          %ul.header-bar
+            %li
+              %span.callphone Appelez: 01 41 27 27 17
+            %li
+              %span.emailus-btn
+                %a{:href => "/contact/contact-0"} Écrivez-nous
+            %li.languages
+              %div Pays
+              %ul
+                %li.es-AR.first
+                  %a.language-link{:href => "http://www.emailvision.com.ar/"}
+                    %img.language-icon{:alt => "Argentina", :height => "14", :src => "/assets/flags/ico_flag_es-AR.png", :title => "Argentina", :width => "14"}/
+                    Argentina
+                %li.nl-BE
+                  %a.language-link{:href => "http://www.emailvision.be"}
+                    %img.language-icon{:alt => "Belgique / België", :height => "14", :src => "/assets/flags/ico_flag_nl-BE.png", :title => "Belgique / België", :width => "14"}/
+                    Belgique / België
+                %li.pt-br
+                  %a.language-link{:href => "http://www.emailvisionbrasil.com.br/"}
+                    %img.language-icon{:alt => "Brasil", :height => "14", :src => "/assets/flags/ico_flag_pt-br.png", :title => "Brasil", :width => "14"}/
+                    Brasil
+                %li.en-CA
+                  %a.language-link{:href => "http://www.emailvision-canada.ca"}
+                    %img.language-icon{:alt => "Canada (FR / EN)", :height => "14", :src => "/assets/flags/ico_flag_en-CA.png", :title => "Canada (FR / EN)", :width => "14"}/
+                    Canada (FR / EN)
+                %li.da
+                  %a.language-link{:href => "http://www.emailvision.dk/"}
+                    %img.language-icon{:alt => "Danmark", :height => "14", :src => "/assets/flags/ico_flag_da.png", :title => "Danmark", :width => "14"}/
+                    Danmark
+                %li.de
+                  %a.language-link{:href => "http://www.emailvision.de/"}
+                    %img.language-icon{:alt => "Deutschland", :height => "14", :src => "/assets/flags/ico_flag_de.png", :title => "Deutschland", :width => "14"}/
+                    Deutschland
+                %li.es
+                  %a.language-link{:href => "http://www.emailvision.es/"}
+                    %img.language-icon{:alt => "España", :height => "14", :src => "/assets/flags/ico_flag_es.png", :title => "España", :width => "14"}/
+                    España
+                %li.fr.active
+                  %a.language-link.active{:href => "http://www.emailvision.fr/"}
+                    %img.language-icon{:alt => "France", :height => "14", :src => "/assets/flags/ico_flag_fr.png", :title => "France", :width => "14"}/
+                    France
+                %li.en-HK
+                  %a.language-link{:href => "http://www.emailvision.hk/"}
+                    %img.language-icon{:alt => "Hong Kong", :height => "14", :src => "/assets/flags/ico_flag_en-HK.png", :title => "Hong Kong", :width => "14"}/
+                    Hong Kong
+                %li.en-IL
+                  %a.language-link{:href => "http://www.emailvision.co.il/"}
+                    %img.language-icon{:alt => "Israel", :height => "14", :src => "/assets/flags/ico_flag_en-IL.png", :title => "Israel", :width => "14"}/
+                    Israel
+                %li.it
+                  %a.language-link{:href => "http://www.emailvision.it/"}
+                    %img.language-icon{:alt => "Italia", :height => "14", :src => "/assets/flags/ico_flag_it.png", :title => "Italia", :width => "14"}/
+                    Italia
+                %li.es-MX
+                  %a.language-link{:href => "http://www.emailvision.mx/"}
+                    %img.language-icon{:alt => "México", :height => "14", :src => "/assets/flags/ico_flag_es-MX.png", :title => "México", :width => "14"}/
+                    México
+                %li.nl
+                  %a.language-link{:href => "http://www.emailvision.nl/"}
+                    %img.language-icon{:alt => "Nederland", :height => "14", :src => "/assets/flags/ico_flag_nl.png", :title => "Nederland", :width => "14"}/
+                    Nederland
+                %li.de-AT
+                  %a.language-link{:href => "http://www.emailvision.at/"}
+                    %img.language-icon{:alt => " Österreich", :height => "14", :src => "/assets/flags/ico_flag_de-AT.png", :title => " Österreich", :width => "14"}/
+                    Österreich
+                %li.pt-pt
+                  %a.language-link{:href => "http://www.emailvision.pt/"}
+                    %img.language-icon{:alt => "Portugal", :height => "14", :src => "/assets/flags/ico_flag_pt-pt.png", :title => "Portugal", :width => "14"}/
+                    Portugal
+                %li.de-CH
+                  %a.language-link{:href => "http://www.emailvision.ch"}
+                    %img.language-icon{:alt => "Suisse / Schweiz", :height => "14", :src => "/assets/flags/ico_flag_de-CH.png", :title => "Suisse / Schweiz", :width => "14"}/
+                    Suisse / Schweiz
+                %li.fi
+                  %a.language-link{:href => "http://www.emailvision.fi/"}
+                    %img.language-icon{:alt => "Suomi", :height => "14", :src => "/assets/flags/ico_flag_fi.png", :title => "Suomi", :width => "14"}/
+                    Suomi
+                %li.sv
+                  %a.language-link{:href => "http://www.emailvision.se/"}
+                    %img.language-icon{:alt => "Sverige", :height => "14", :src => "/assets/flags/ico_flag_sv.png", :title => "Sverige", :width => "14"}/
+                    Sverige
+                %li.en-UK
+                  %a.language-link{:href => "http://www.emailvision.co.uk/"}
+                    %img.language-icon{:alt => "United Kingdom", :height => "14", :src => "/assets/flags/ico_flag_en-UK.png", :title => "United Kingdom", :width => "14"}/
+                    United Kingdom
+                %li.en-US
+                  %a.language-link{:href => "http://www.emailvision.com/"}
+                    %img.language-icon{:alt => "USA", :height => "14", :src => "/assets/flags/ico_flag_en-US.png", :title => "USA", :width => "14"}/
+                    USA
+                %li.zh-hans
+                  %a.language-link{:href => "http://www.emailvision.cn/"}
+                    %img.language-icon{:alt => "中国", :height => "14", :src => "/assets/flags/ico_flag_zh-hans.png", :title => "中国", :width => "14"}/
+                    中国
+                %li.ru.last
+                  %a.language-link{:href => "http://www.emailvision.ru/"}
+                    %img.language-icon{:alt => "Россия", :height => "14", :src => "/assets/flags/ico_flag_ru.png", :title => "Россия", :width => "14"}/
+                    Россия
+      / /block-inner
+    / /block
+    #block-menu-menu-main-nav-fr.block.block-menu.block-header_nav.block-id-menu-menu-main-nav-fr.clearfix.odd.block-header
+      .block-inner
+        .content
+          %ul.menu.niv1.clearfix
+            %li.expanded.first.produits.item-normal
+              %a{:href => "http://www.emailvision.fr/produits/apercu-des-produits", :title => "Gestion campagne Emailing & Social"} Produits
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.aper-u_des_produits.item-normal
+                  %a{:href => "http://www.emailvision.fr/produits/apercu-des-produits"} Aperçu des produits
+                %li.leaf.email_-amp-_mobile_edition.item-normal
+                  %a{:href => "http://www.emailvision.fr/produits/email-mobile-edition", :title => "Email & mobile Marketing"} Email & Mobile Edition
+                %li.leaf.social_edition.item-normal
+                  %a{:href => "http://www.emailvision.fr/produits/social-edition-0", :title => "Logiciel Social Media Marketing"} Social Edition
+                %li.expanded.last.plate-forme_technologique.item-normal
+                  %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique", :title => "Plate-forme technologique Emailing"} Plate-forme technologique
+                  %ul.menu.niv1.clearfix
+                    %li.leaf.first.infrastructure.item-normal
+                      %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique/infrastructure", :title => "Infrastructure technologique "} Infrastructure
+                    %li.leaf.s-curit-.item-normal
+                      %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique/securite", :title => "Sécurité des données emailing"} Sécurité
+                    %li.leaf.politique_anti-spam.item-normal
+                      %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique/politique-anti-spam", :title => "Politique Anti-Spam Emailing"} Politique Anti-Spam
+                    %li.leaf.d-livrabilit-.item-normal
+                      %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique/delivrabilite", :title => "Délivrabilité des emails"} Délivrabilité
+                    %li.leaf.last.int-gration_et_api.item-normal
+                      %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique/integration-et-api", :title => "Interface API Emailing"} Intégration et API
+            %li.expanded.solutions.item-normal
+              %a{:href => "http://www.emailvision.fr/solutions/apercu-des-solutions", :title => "Solutions eMarketing"} Solutions
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.aper-u_des_solutions.item-normal
+                  %a{:href => "http://www.emailvision.fr/solutions/apercu-des-solutions"} Aperçu des solutions
+                %li.leaf.pourquoi_choisir_emailvision_-.item-normal
+                  %a{:href => "http://www.emailvision.fr/solutions/pourquoi-choisir-emailvision", :title => "Pourquoi choisir Emailvision ?"} Pourquoi choisir Emailvision ?
+                %li.expanded.par_d-fi.item-normal
+                  %a{:href => "http://www.emailvision.fr/solutions/par-defi", :title => "Défis du Marketing online"} Par défi
+                  %ul.menu.niv1.clearfix
+                    %li.leaf.first.d-butant_dans_l-039-emailing_et_les_m-dia_sociaux.item-normal
+                      %a{:href => "http://www.emailvision.fr/solutions/par-defi/debutant-dans-lemailing-et-les-media-sociaux", :title => "Débutant en email & social Marketing"} Débutant dans l'emailing et les média sociaux
+                    %li.leaf.vous_voulez_faire_mieux_-.item-normal
+                      %a{:href => "http://www.emailvision.fr/solutions/par-defi/vous-voulez-faire-mieux", :title => "Tactiques avancées logiciel emailing"} Vous voulez faire mieux ?
+                    %li.leaf.last.utilisateur_exp-riment-_-.item-normal
+                      %a{:href => "http://www.emailvision.fr/solutions/par-defi/utilisateur-experimente", :title => "Fonctionnalités utilisateurs avancées "} Utilisateur expérimenté ?
+                %li.expanded.par_secteur_d-039-activit-s.item-normal
+                  %a{:href => "http://www.emailvision.fr/solutions/par-secteur-dactivites", :title => "Solutions secteurs"} Par secteur d'activités
+                  %ul.menu.niv1.clearfix
+                    %li.leaf.first.e-commerce.item-normal
+                      %a{:href => "http://www.emailvision.fr/solutions/par-secteur-dactivites/e-commerce", :title => "Solutions E-commerce"} E-commerce
+                    %li.leaf.entreprise.item-normal
+                      %a{:href => "http://www.emailvision.fr/solutions/par-secteur-dactivites/entreprise", :title => "Solutions Entreprises"} Entreprise
+                    %li.leaf.last.agences_digitales.item-normal
+                      %a{:href => "http://www.emailvision.fr/solutions/par-secteur-dactivites/agences-digitales", :title => "Agences digitales partenaires"} Agences digitales
+                %li.leaf.pour_les_agences.item-normal
+                  %a{:href => "http://www.emailvision.fr/solutions/pour-les-agences", :title => "Programme Partnervision"} Pour les agences
+                %li.leaf.last.pour_les_partenaires_technologiques.item-normal
+                  %a{:href => "http://www.emailvision.fr/solutions/pour-les-partenaires-technologiques"} Pour les partenaires technologiques
+            %li.expanded.services.item-normal
+              %a{:href => "http://www.emailvision.fr/services/apercu-des-services", :title => "Services professionnels emailing"} Services
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.aper-u_des_services.item-normal
+                  %a{:href => "http://www.emailvision.fr/services/apercu-des-services", :title => "Services professionnels emailing"} Aperçu des services
+                %li.leaf.assistance_client.item-normal
+                  %a{:href => "http://www.emailvision.fr/services/assistance-client", :title => "Service clientèle"} Assistance Client
+                %li.expanded.services_-_valeur_ajout-e.item-normal
+                  %a{:href => "http://www.emailvision.fr/services/services-valeur-ajoutee", :title => "Services à valeur ajoutée"} Services à valeur ajoutée
+                  %ul.menu.niv1.clearfix
+                    %li.leaf.first.installation_et_int-gration.item-normal
+                      %a{:href => "http://www.emailvision.fr/services/services-valeur-ajoutee/installation-et-integration", :title => "Services installation & intégration"} Installation et intégration
+                    %li.leaf.formation.item-normal
+                      %a{:href => "http://www.emailvision.fr/services/services-valeur-ajoutee/formation", :title => "Formation logiciel Emailing & Social"} Formation
+                    %li.leaf.managed_services.item-normal
+                      %a{:href => "http://www.emailvision.fr/services/services-valeur-ajoutee/managed-services", :title => "Services managés"} Managed Services
+                    %li.leaf.services_de_cr-ation.item-normal
+                      %a{:href => "http://www.emailvision.fr/services/services-valeur-ajoutee/services-de-creation", :title => "Services créatifs"} Services de création
+                    %li.leaf.last.services_strat-giques.item-normal
+                      %a{:href => "http://www.emailvision.fr/services/services-valeur-ajoutee/services-strategiques", :title => "Services stratégiques emailing"} Services stratégiques
+                %li.leaf.last.emailvision_academy.item-normal
+                  %a{:href => "http://www.emailvision.fr/services/emailvision-academy", :title => "Centre de formation Emailing"} Emailvision Academy
+            %li.expanded.cas_clients.item-normal
+              %a{:href => "http://www.emailvision.fr/cas-clients", :title => "Cas clients"} Cas Clients
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.clients.item-normal
+                  %a{:href => "http://www.emailvision.fr/cas-clients", :title => ""} Clients
+                %li.leaf.succ-s_clients.item-normal
+                  %a{:href => "http://www.emailvision.fr/succes-clients/cas-clients", :title => "Succès clients"} Succès clients
+                %li.leaf.last.t-moignages.item-normal
+                  %a{:href => "http://www.emailvision.fr/clients/temoignages", :title => "Témoignages clients"} Témoignages
+            %li.expanded.centre_d-expertise.item-normal
+              %a{:href => "http://www.emailvision.fr/node/927"} Centre d’expertise
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.vision_-amp-_leadership.item-normal
+                  %a{:href => "http://www.emailvision.fr/centre-d-expertise/vision-leadership", :title => "Leader de l'email marketing"} Vision & Leadership
+                %li.leaf.produits.item-normal
+                  %a{:href => "http://www.emailvision.fr/centre-d-expertise/produits", :title => "Logiciel Email & Social"} Produits
+                %li.expanded.last.emailvision_academy.item-normal
+                  %a{:href => "http://www.emailvision.fr/centre-d-expertise/emailvision-academy-0", :title => ""} Emailvision Academy
+                  %ul.menu.niv1.clearfix
+                    %li.leaf.first.last.ev-nements.item-normal
+                      %a{:href => "http://www.emailvision.fr/centre-d-expertise/emailvision-academy/evenements"} Evénements
+            %li.expanded.d-couvrez_emailvision.item-silver
+              %a.silver{:href => "http://www.emailvision.fr/decouvrez-emailvision/notre-histoire"} Découvrez Emailvision
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.notre_histoire.item-normal
+                  %a{:href => "http://www.emailvision.fr/decouvrez-emailvision/notre-histoire", :title => "Histoire société Email Marketing"} Notre histoire
+                %li.leaf.equipe_dirigeante.item-normal
+                  %a{:href => "http://www.emailvision.fr/decouvrez-emailvision/equipe-dirigeante", :title => "Equipe dirigeante Emailvision"} Equipe dirigeante
+                %li.leaf.mission_-amp-_valeurs.item-normal
+                  %a{:href => "http://www.emailvision.fr/decouvrez-emailvision/mission-valeurs", :title => "Mission & Valeurs"} Mission & Valeurs
+                %li.leaf.pr-sence_internationale.item-normal
+                  %a{:href => "http://www.emailvision.fr/contact", :title => ""} Présence internationale
+                %li.leaf.last.notre_-quipe.item-normal
+                  %a{:href => "http://www.emailvision.fr/decouvrez-emailvision/notre-equipe"} Notre équipe
+            %li.expanded.actualit-s.item-silver
+              %a.silver{:href => "http://www.emailvision.fr/actualites/vue-densemble", :title => "Actualités & évènements"} Actualités
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.vue_d-039-ensemble.item-normal
+                  %a{:href => "http://www.emailvision.fr/actualites/vue-densemble", :title => ""} Vue d'ensemble
+                %li.leaf.ev-nements.item-normal
+                  %a{:href => "http://www.emailvision.fr/actualites/evenements", :title => "Evènements web marketing"} Evénements
+                %li.leaf.blog.item-normal
+                  %a{:href => "http://www.emailvision.fr/actualites/blog"} Blog
+                %li.leaf.last.communiqu-s_de_presse.item-normal
+                  %a{:href => "http://www.emailvision.fr/actualites/communiques-de-presse", :title => "Communiqués de presse"} Communiqués de presse
+            %li.expanded.carri-res.item-silver
+              %a.silver{:href => "http://www.emailvision.fr/carrieres/vue-densemble", :title => ""} Carrières
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.vue_d-039-ensemble.item-normal
+                  %a{:href => "http://www.emailvision.fr/carrieres/vue-densemble", :title => "Carrières Webmarketing"} Vue d'ensemble
+                %li.leaf.aller_au-del-_des_limites.item-normal
+                  %a{:href => "http://www.emailvision.fr/carrieres/aller-au-dela-des-limites", :title => "Challenge interne & Développement professionnel "} Aller au-delà des limites
+                %li.leaf.une_vue_de_l-039-int-rieur.item-normal
+                  %a{:href => "http://www.emailvision.fr/carrieres/une-vue-de-linterieur", :title => "Au sein du groupe"} Une vue de l'intérieur
+                %li.leaf.mission_-amp-_valeurs.item-normal
+                  %a{:href => "http://www.emailvision.fr/carrieres/mission-valeurs", :title => "Mission, vision & valeurs "} Mission & Valeurs
+                %li.leaf.offres_d-039-emploi.item-normal
+                  %a{:href => "http://www.emailvision.fr/carrieres/offres-demploi", :title => "Opportunités & Offres d'emploi"} Offres d'emploi
+                %li.leaf.last.faq.item-normal
+                  %a{:href => "http://www.emailvision.fr/carrieres/faq", :title => "FAQ Emailvision"} FAQ
+            %li.expanded.last.contact.item-silver
+              %a.silver{:href => "http://www.emailvision.fr/contact", :title => "Bureaux"} Contact
+              %ul.menu.niv1.clearfix
+                %li.leaf.first.bureaux.item-normal
+                  %a{:href => "http://www.emailvision.fr/contact", :title => ""} Bureaux
+                %li.leaf.contact.item-normal
+                  %a{:href => "http://www.emailvision.fr/contact/contact-0"} Contact
+                %li.leaf.last.inscription_newsletter.item-normal
+                  %a{:href => "http://www.emailvision.fr/node/2432"} Inscription Newsletter
+      / /block-inner
+    / /block
+/ /header
+/ ______________________ MAIN _______________________
 

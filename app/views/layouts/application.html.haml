@@ -1,19 +1,43 @@
-!!!
-%html{:lang => "en"}
+!!! Strict
+%html{:dir => "ltr", :lang => "fr", "xml:lang" => "fr", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
-    %title EmailVision Customer Portal
-    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Email Marketing & Social Media - Logiciel emailing - Emailvision
+    %meta{:content => "http://www.emailvision.fr//sites/all/themes/emv/images/fbsthumnail.png", :property => "og:image"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "http://www.emailvision.fr/node/949", :rel => "canonical"}/
+    %meta{:content => "Emailvision est  le  leader mondial du SaaS pour vos campagnes email marketing. Gestion et automatisation de vos campagnes emailing, mobile et social media.", :name => "description"}/
+    %link{:href => "/sites/default/files/emv_favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    / patch css menu
+    :css
+      #header .block-menu.block-header a {display:none;}
+          / //patch css menu
     = stylesheet_link_tag    "/assets/style.css"
-    = javascript_include_tag "application"
-    /[if IE 6]
-      <link rel="stylesheet" href="css/ie.css" />
-  %body
-    = render 'shared/header'
-    #the_body
-      .container_12
-        = yield
-        = yield :sidebar
-      / container_12
-    / the_body
-    = render 'shared/footer'
+    /[if lte IE 6] <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/emv/css/ie6.css" />
+    /[if IE 7] <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/emv/css/ie7.css" />
+    /[if lte IE 8]
+      <script type="text/javascript" src="/sites/all/themes/emv/scripts/roundies.js">
+      </script>
+  %body.front.not-logged-in.page-node.node-type-homepage.no-sidebars.i18n-fr.with-navigation
+    .container_12
+      #page
+        / ______________________ HEADER _______________________
+        = render 'shared/header'
+        #main.clearfix
+          #content
+            #content-inner.inner.column.center
+              #content-area
+                #node-949.node.node.clearfix.node-type-homepage
+                  .node-inner
+                    .content
+                      / SLIDER HOMEPAGE
+                      / BLOCK DU BAS
+                      = yield
+                    / /node-content
+                  / /node-inner
+                / /node
+              / /#content-area
+          / /content-inner /content
+        / /main
+        / ______________________ FOOTER _______________________
+        = render 'shared/footer'

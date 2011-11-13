@@ -1,66 +1,133 @@
 #footer
-  #footer_border
-  .container_12
-    .grid_3
-      .widget
-        %h4
-          %span About
-        %p
-          Thousands of marketing professionals worldwide rely on Campaign Commander to execute successful email, mobile and social media campaigns and adopt best practices in relationship marketing. It allows marketers to automate more of their work so they can significantly increase the relevance and profitability of their campaigns.
-      / widget
-    / grid_3
-    .grid_3
-      .widget
-        %h4
-          %span Twitter
-        %ul#twitter_update_list
-          %li.first
-            %a{:href => "#"} @laurakalbag
-            I will be very soon. As a result of your previous recommendation on a blog post so it happens :)
-            %a{:href => "#"} 31 minutes ago
-          %li
-            %a{:href => "#"} @laurakalbag
-            you got chocolates!? That's it, I'm signing up.
-            %a{:href => "#"} 37 minutes ago
-          %li.last
-            RT
-            = succeed ":" do
-              %a{:href => "#"} @tullett
-            Emails that start with "Dear contact" make me feel so special
-            %a{:href => "#"} 50 minutes ago
-        %p
-          %a{:href => "#"} @ormanclark on Twitter
-      / widget
-    / grid_3
-    .grid_3
-      .widget
-        %h4
-          %span Anti-Spam Policy
-        %p
-          Emailvision only supports permission-based marketing practices and has a zero spam tolerance policy.
-          Emailvision supports the following anti-spam organizations
-      / widget
-    / grid_3
-    .clear
-  / container_12
-  #footer_bottom
-    .container_12
-      .grid_6
-        %p
-          Copyright 2011
-          = succeed "." do
-            %a{:href => "#"} Oxala Consulting
-          All Rights Reserved.
-      / grid_6
-      .grid_6
-        %p.right
-          EmailVision Customer Portal Demo
-          by
-          %a{:href => "http://vzmind.tumblr.com"} Vzmind
-      / grid_6
-      .clear
-    / container_12
-  / footer_bottom
-/ footer
-
-
+  .footer-inner.clearfix
+    #block-menu_block-6.block.block-menu_block.block-footer_block_second.block-id-menu_block-6.clearfix.odd
+      .block-inner
+        %h4.title.block-title Liens utiles
+        .content
+          .menu-block-6.menu-name-menu-main-nav-fr.parent-mlid-0.menu-level-1
+            %ul.menu.niv1.clearfix
+              %li.leaf.first.menu-mlid-23194.has-children.produits.item-normal
+                %a{:href => "http://www.emailvision.fr/produits/apercu-des-produits", :title => "Gestion campagne Emailing & Social"} Produits
+              %li.leaf.menu-mlid-23197.has-children.solutions.item-normal
+                %a{:href => "http://www.emailvision.fr/solutions/apercu-des-solutions", :title => "Solutions eMarketing"} Solutions
+              %li.leaf.menu-mlid-23195.has-children.services.item-normal
+                %a{:href => "http://www.emailvision.fr/services/apercu-des-services", :title => "Services professionnels emailing"} Services
+              %li.leaf.menu-mlid-24280.has-children.cas_clients.item-normal
+                %a{:href => "http://www.emailvision.fr/cas-clients", :title => "Cas clients"} Cas Clients
+              %li.leaf.menu-mlid-23512.has-children.centre_d-expertise.item-normal
+                %a{:href => "http://www.emailvision.fr/node/927"} Centre d’expertise
+              %li.leaf.menu-mlid-23196.has-children.d-couvrez_emailvision.item-silver
+                %a.silver{:href => "http://www.emailvision.fr/decouvrez-emailvision/notre-histoire"} Découvrez Emailvision
+              %li.leaf.menu-mlid-23458.has-children.actualit-s.item-silver
+                %a.silver{:href => "http://www.emailvision.fr/actualites/vue-densemble", :title => "Actualités & évènements"} Actualités
+              %li.leaf.menu-mlid-23459.has-children.carri-res.item-silver
+                %a.silver{:href => "http://www.emailvision.fr/carrieres/vue-densemble", :title => ""} Carrières
+              %li.leaf.last.menu-mlid-23460.has-children.contact.item-silver
+                %a.silver{:href => "http://www.emailvision.fr/contact", :title => "Bureaux"} Contact
+      / /block-inner
+    / /block
+    #block-menu-menu-foot-additional-fr.block.block-menu.block-footer_block_second.block-id-menu-menu-foot-additional-fr.clearfix.even
+      .block-inner
+        %h4.title.block-title Autres liens
+        .content
+          %ul.menu.niv1.clearfix
+            %li.leaf.first.plan_du_site_emailvision.item-normal
+              %a{:href => "http://www.emailvision.fr/plan-du-site", :title => "Plan du site - Emailivision - Leader Emaling & Social Marketing"} Plan du site Emailvision
+            %li.leaf.politique_de_confidentialit-.item-normal
+              %a{:href => "http://www.emailvision.fr/politique-de-confidentialite", :title => "Politique de confidentialité"} Politique de confidentialité
+            %li.leaf.last.politique_anti-spam.item-normal
+              %a{:href => "http://www.emailvision.fr/produits/plate-forme-technologique/politique-anti-spam", :title => ""} Politique Anti-Spam
+      / /block-inner
+    / /block
+    #block-emvcustom_blocks-0.block.block-emvcustom_blocks.block-footer_block.block-id-emvcustom_blocks-0.clearfix.odd
+      .block-inner
+        %h4.title.block-title
+          Sites internationaux
+        .content
+          .languages-link-list
+            %ul.links
+              %li.es-AR.first
+                %a.language-link{:href => "http://www.emailvision.com.ar/"} Argentina
+              %li.nl-BE
+                %a.language-link{:href => "http://www.emailvision.be"} Belgique / België
+              %li.pt-br
+                %a.language-link{:href => "http://www.emailvisionbrasil.com.br/"} Brasil
+              %li.en-CA
+                %a.language-link{:href => "http://www.emailvision.ca"} Canada (FR / EN)
+              %li.da
+                %a.language-link{:href => "http://www.emailvision.dk/"} Danmark
+              %li.de
+                %a.language-link{:href => "http://www.emailvision.de/"} Deutschland
+              %li.es
+                %a.language-link{:href => "http://www.emailvision.es/"} España
+              %li.fr.active
+                %a.language-link.active{:href => "http://www.emailvision.fr/"} France
+              %li.en-HK
+                %a.language-link{:href => "http://www.emailvision.hk/"} Hong Kong
+              %li.en-IL
+                %a.language-link{:href => "http://www.emailvision.co.il/"} Israel
+              %li.it
+                %a.language-link{:href => "http://www.emailvision.it/"} Italia
+              %li.es-MX
+                %a.language-link{:href => "http://www.emailvision.mx/"} México
+              %li.nl
+                %a.language-link{:href => "http://www.emailvision.nl/"} Nederland
+              %li.de-AT
+                %a.language-link{:href => "http://www.emailvision.at/"} Österreich
+              %li.pt-pt
+                %a.language-link{:href => "http://www.emailvision.pt/"} Portugal
+              %li.de-CH
+                %a.language-link{:href => "http://www.emailvision.ch"} Suisse / Schweiz
+              %li.fi
+                %a.language-link{:href => "http://www.emailvision.fi/"} Suomi
+              %li.sv
+                %a.language-link{:href => "http://www.emailvision.se/"} Sverige
+              %li.en-UK
+                %a.language-link{:href => "http://www.emailvision.co.uk/"} United Kingdom
+              %li.en-US
+                %a.language-link{:href => "http://www.emailvision.com/"} USA
+              %li.zh-hans
+                %a.language-link{:href => "http://www.emailvision.cn/"} 中国
+              %li.ru.last
+                %a.language-link{:href => "http://www.emailvision.ru/"} Россия
+      / /block-inner
+    / /block
+    #block-block-1.block.block-block.block-footer_block.block-id-block-1.clearfix.even
+      .block-inner
+        %h4.title.block-title Contactez-nous
+        .content
+          %ul
+            %li
+              %strong Appelez: 01 41 27 27 17
+            %li
+              %a{:href => "/contact/contact-0"} Écrivez-nous
+            %li
+              %a{:href => "/contact"} Contactez-nous
+      / /block-inner
+    / /block
+    #block-block-2.block.block-block.block-footer_block.block-id-block-2.clearfix.odd
+      .block-inner
+        .content
+          %h4 Politique Anti-Spam
+          %p Emailvision n’approuve que le marketing basé sur un principe de choix de l’utilisateur et a une politique zéro tolérance à l’égard des spams.
+          %p Emailvision soutient les organisations Anti-Spam suivantes:
+          %ul.antispam-list.clearfix
+            / <li class="logo1"><a href="//privacy-policy.truste.com/click-with-confidence/ctv/en/www.campaigncommander.com/seal_s" title="Validate TRUSTe privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/certified-seal/ctv/en/www.campaigncommander.com/seal_s.png" alt="Validate TRUSTe privacy certification"/></a></li>
+            %div{:style => "margin-top:10px;"}
+              %span{:style => "margin-right:1px; margin-top: 3px; float:left;"}
+                %a{:href => "//privacy-policy.truste.com/click-with-confidence/eusafe/en/www.emailvision.com/seal_m", :target => "_blank", :title => "TRUSTe European Safe Harbor certification"}
+                  %img{:alt => "TRUSTe European Safe Harbor certification", :src => "//privacy-policy.truste.com/certified-seal/EuSafeHarbor/en/www.emailvision.com/seal_m.png", :style => "border: none"}/
+              /
+                <li class="logo2"><a href="http://www.espcoalition.org/" target="_blank"><img style="border: none" src="/assets//espc_logo.png" alt="Espc"/></a></li>
+                </ul>
+              %span{:style => "float:left;"}
+                %a{:href => "http://www.espcoalition.org/", :target => "_blank"}
+                  %img{:alt => "Espc", :src => "/assets/espc_logo.png", :style => "border: none"}/
+      / /block-inner
+    / /block
+/ /footer
+#copyrightb
+  .copyrightb-info © 2011 Emailvision - All rights reserved
+  .copyrightb-design Website designbystructure & is&abloom
+/ /footer
+/ /page
