@@ -1,2 +1,36 @@
-<h1>Cases#show</h1>
-<p>Find me in app/views/cases/show.html.erb</p>
+.grid_8
+  .grid_8.alpha.omega
+    .full_posts
+      .form
+        = form_tag('/cases/%s' % @case['Id'], :method => :put, :name => 'auth')
+        %input{:type => 'hidden', :name => 'case[Id]', :value => @case['Id']}
+        .field
+          %label Case Number
+          %label=  @case['CaseNumber']
+        .field
+          %label Type
+          %input{:name => 'case[Type]', :value => @case['Type']}
+        .field
+          %label Reason
+          %input{:name => 'case[Reason]', :value => @case['Reason']}
+        .field
+          %label Status 
+          %input{:name => 'case[Status]', :value => @case['Status']}
+        .field
+          %label Subject 
+          %input{:name => 'case[Subject]', :value => @case['Subject']}
+        .field
+          %label Description 
+          %textarea{:name => 'case[Description]'}
+            = @case['Description']
+        .field
+          %input{:type => 'submit'}
+
+  .clear
+- content_for :sidebar do
+  .grid_4
+    = render 'shared/sidebar'
+  / grid_4
+  .clear
+
+
