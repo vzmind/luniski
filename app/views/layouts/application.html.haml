@@ -24,21 +24,9 @@
       #page
         / ______________________ HEADER _______________________
         = render 'shared/header'
+        / ______________________ MAIN    _______________________
         #main.clearfix
           #content
-            #content-inner.inner.column.center
-              #content-area
-                #node-949.node.node.clearfix.node-type-homepage
-                  .node-inner
-                    .content
-                      / SLIDER HOMEPAGE
-                      / BLOCK DU BAS
-                      = yield
-                    / /node-content
-                  / /node-inner
-                / /node
-              / /#content-area
-          / /content-inner /content
-        / /main
+            = yield
         / ______________________ FOOTER _______________________
         = render 'shared/footer'
