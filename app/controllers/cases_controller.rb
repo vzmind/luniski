@@ -14,6 +14,11 @@ class CasesController < ApplicationController
   end
 
   def show
+    @sfdc = Databasedotcom::Client.new("config/databasedotcom.yml")
+    @sfdc.authenticate :token => session[:token], :instance_url => ENV['sfdc_instance_url']
+    @sfdc.materialize("Case")
+
+    @case = Case.find(params[:id])
   end
 
   def edit

@@ -11,6 +11,10 @@ gem 'savon'
 gem 'pg'
 gem 'execjs'
 gem 'therubyracer'
+gem 'dalli'
+gem 'rack-cache', :require => 'rack/cache'
+gem 'rack-contrib', :require => 'rack/contrib'
+
 
 
 # Gems used only for assets and not required
@@ -32,6 +36,7 @@ group :test do
 end
 
 group :production do
+  gem 'thin'
 end
 
 
