@@ -17,8 +17,11 @@ class CasesController < ApplicationController
     @sfdc = Databasedotcom::Client.new("config/databasedotcom.yml")
     @sfdc.authenticate :token => session[:token], :instance_url => ENV['sfdc_instance_url']
     @sfdc.materialize("Case")
+    @sfdc.materialize("CaseComment")
 
     @case = Case.find(params[:id])
+    @comments = CaseComment.find_all_by_parentId(params[:id]) || []
+    
   end
 
   def edit
