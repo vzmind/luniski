@@ -14,7 +14,9 @@ gem 'therubyracer'
 gem 'dalli'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'rack-contrib', :require => 'rack/contrib'
-
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
+gem 'devise'
 
 
 # Gems used only for assets and not required
