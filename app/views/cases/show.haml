@@ -1,31 +1,39 @@
 .grid_8
   .grid_8.alpha.omega
-    .full_posts
+    #case-show
       .case-show
         .field
-          %label Case Number
-          %label=  @case['CaseNumber']
+          .label Case Number
+          .text=  @case['CaseNumber']
+          .clear
         .field
-          %label Type
-          %label= @case['Type']
+          .label Type
+          .text= @case['Type']
+          .clear
         .field
-          %label Reason
-          %label= @case['Reason']
+          .label Reason
+          .text= @case['Reason']
+          .clear
         .field
-          %label Status 
-          %label= @case['Status']
+          .label Status 
+          .textl= @case['Status']
+          .clear
         .field
-          %label Subject 
-          %label= @case['Subject']
+          .label Subject 
+          .text= @case['Subject']
+          .clear
         .field
-          %label Description 
-          %label= @case['Description']
+          .label Description 
+          .text= @case['Description']
+          .clear
       .case-comments
+        = "Your case has %s comments" % @comments.count if @comments.count > 0
         - @comments.each do |comment|
-          .comment
-            %span
+          .comments
+            .label
               = "%s said:" % "toto"
-            %span
+            .comment
               = comment['CommentBody']
+            .clear
 
   .clear
