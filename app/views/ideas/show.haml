@@ -1,0 +1,13 @@
+.grid_8
+  .grid_8.alpha.omega
+    #case-show
+      .case-show
+        .field
+          .label Title
+          .text=  @idea['Title']
+          .clear
+        .field
+          .label Description
+          .text= @idea['Body'].html_safe
+          .clear
+  .clear

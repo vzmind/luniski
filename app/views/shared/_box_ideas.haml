@@ -3,7 +3,11 @@
   %h2
     Ideas
   .box_content
-    ALL IDEAS
+    %ul
+      - @ideas.each do |i|
+        %li
+          %a{:href => idea_path(i['Id'])}= i['Title']
+
   %a.btn-w{:href => "#"} → All ideas
 / /IDEAS BLOCK
 
