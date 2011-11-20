@@ -3,8 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def login
-    
-
+    session[:token]     = nil
+    session[:full_name] = nil
+    session[:user_id]   = nil
   end
 
   def logout
