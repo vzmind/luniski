@@ -28,12 +28,24 @@
           .clear
       .case-comments
         = "Your case has %s comments" % @comments.count if @comments.count > 0
-        - @comments.each do |comment|
-          .comments
-            .label
-              = "%s said:" % "toto"
-            .comment
-              = comment['CommentBody']
+        #comments
+          - @comments.each do |comment|
+            .comments
+              .label
+                = "%s said:" % "XYZ"
+              .comment
+                = comment['CommentBody']
+              .clear
+        .add-comment
+          = form_tag('/comments', :remote => true, :method => 'post', :id => 'comment_form')
+          %span Add a new comment
+          %input{:type => :hidden, :name => 'comment[case_id]', :value => @case['Id']}
+          %textarea{:name => 'comment[description]',:cols => 22, :rows => 4}
+          .submit
+            %input.btn-w{:type => 'submit', :value => 'create'}
             .clear
+
+
+        
 
   .clear

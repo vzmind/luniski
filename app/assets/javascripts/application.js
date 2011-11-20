@@ -46,4 +46,9 @@ $(document).ready(function() {
   $('textarea').click(function(){
     $(this).focus();
   });
+  // Comment add with AJAX
+  $('#comment_form')
+    .live('ajax:complete', function(evt, xhr, status){
+      $('#comments').append(xhr.responseText);
+    })
 });

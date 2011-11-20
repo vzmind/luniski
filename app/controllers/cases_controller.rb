@@ -30,6 +30,8 @@ class CasesController < ApplicationController
 
     @case = Case.find(params[:id])
     @comments = CaseComment.find_all_by_parentId(params[:id]) || []
+    @comments.sort! { |a,b| a['CreatedDate'] <=> b['CreatedDate'] }
+    @comment = CaseComment.new
     
   end
 
