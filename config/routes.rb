@@ -1,4 +1,12 @@
 EvDemo::Application.routes.draw do
+  resources :posts
+
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  devise_for :users
+
   root :to => 'home#index'
   
   resources :cases
