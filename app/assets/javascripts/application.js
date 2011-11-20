@@ -40,4 +40,10 @@ $(document).ready(function() {
     }
   })
   .disableSelection();
+  $('input').click(function(){
+    $(this).focus();
+  });
+  $('textarea').click(function(){
+    $(this).focus();
+  });
 });

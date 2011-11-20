@@ -9,7 +9,7 @@ module ApplicationHelper
     @result.push(*feed.entries)
     content = "<ul>"
     @result.each do |item|
-      content += "<li><div class='details'><h5><a href='%s' target='_blank'>%s</a></h5></div>" % [item.url,item.title]
+      content += "<li><h5><a href='%s' target='_blank'>%s</a></h5>" % [item.url,item.title]
       content += "</li>"
     end
     content += "</ul>"
