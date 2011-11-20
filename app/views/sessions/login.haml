@@ -2,7 +2,7 @@
   .login
     %p
       %span
-        = Post.find(1).description
+        = Post.find(1).content
     = form_tag('/sessions/signin', :name => 'auth')
     %label Login
     %input{:name => 'auth[login]'}
