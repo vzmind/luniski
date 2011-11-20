@@ -10,8 +10,17 @@ class CasesController < ApplicationController
 
   end
 
-  def create
+  def new
+    @sfdc = Databasedotcom::Client.new("config/databasedotcom.yml")
+    @sfdc.authenticate :token => session[:token], :instance_url => ENV['sfdc_instance_url']
+    @sfdc.materialize("Case")
+
+    @case = Case.create('Description' => params[:case]['Description'],
+                        'Subject' => params[:case]['Subject'])
+    redirect_to '/home'
+
   end
+
 
   def show
     @sfdc = Databasedotcom::Client.new("config/databasedotcom.yml")

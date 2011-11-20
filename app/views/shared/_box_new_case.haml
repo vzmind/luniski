@@ -3,7 +3,16 @@
   %h2
     New Case
   .box_content
-    NEW CASE
-  %a.btn-w{:href => "#"} → Open a new case
-  / /NEW CASE BLOCK
+    = form_tag('/cases/new', :method => 'get')
+    .field
+      %label Subject 
+      %input{:type => 'text', :name => 'case[Subject]', :value => ''}
+      .clear
+    .field
+      %label Description 
+      %textarea{:name => 'case[Description]',:cols => 22, :rows => 4}
+      .clear
+    .submit
+      %input.btn-w{:type => 'submit', :value => 'create'}
+      .clear
 
