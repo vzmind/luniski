@@ -26,6 +26,8 @@ jQuery(document).ready(function() {
 		dynamicTabs: false,
 		slideEaseDuration: 1000
 	});
+
+  jQuery("p.loading").remove();
 	
 	// Post Grid Tooltips
 	jQuery('.tooltip').poshytip({
