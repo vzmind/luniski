@@ -20,7 +20,9 @@ class SessionsController < ApplicationController
       # Oxala ORG
       #wsdl.document = File.expand_path(Rails.root + "config/wsdl.jsp-new-org.xml", __FILE__)
       # EV ORG
-      wsdl.document = File.expand_path(Rails.root + "config/wsdl.jsp-ev-org.xml", __FILE__)
+      #wsdl.document = File.expand_path(Rails.root + "config/wsdl.jsp-ev-org.xml", __FILE__)
+      # Luniski ORG
+      #wsdl.document = File.expand_path(Rails.root + "config/luniski.wsdl.xml", __FILE__)
     end
     @response = client.request :login do
       # Oxala ORG
