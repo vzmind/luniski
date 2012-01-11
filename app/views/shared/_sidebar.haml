@@ -1,6 +1,6 @@
 #sidebar
   .widget
-    %span= "%s, welcome on Emailvision Portal" % session[:full_name]
+    %span= "%s, welcome on Luniski Center" % session[:full_name]
   .widget
     %form{:action => "#"}
       %input{:name => "s", :type => "text", :value => "to search, type and hit enter"}
@@ -35,44 +35,6 @@
       %img{:alt => "video", :src => "/assets/video.jpg"}
     / video
   / widget
-  .widget
-    .half
-      %h4
-        %span Archive
-      %ul
-        %li
-          %a{:href => "#"} January
-        %li
-          %a{:href => "#"} February
-        %li
-          %a{:href => "#"} March
-        %li
-          %a{:href => "#"} April
-        %li
-          %a{:href => "#"} May
-        %li
-          %a{:href => "#"} June
-        %li
-          %a{:href => "#"} July
-        %li
-          %a{:href => "#"} August
-        %li
-          %a{:href => "#"} September
-        %li
-          %a{:href => "#"} October
-        %li
-          %a{:href => "#"} November
-        %li
-          %a{:href => "#"} December
-    / half
-    .half.last
-      %h4
-        %span Sponsor
-      .sidebar_ad
-        %a{:href => "#"}
-          %img{:alt => "sidebar ad", :src => "/assets/sidebar_ad.jpg"}/
-      / sidebar_ad
-    / half
   / widget
 / sidebar
 
