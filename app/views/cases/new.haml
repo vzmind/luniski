@@ -5,11 +5,11 @@
         = form_tag('/cases', :method => :post)
         .field
           %label Subject 
-          %input{:name => 'case[Subject]', :value => @case['Subject']}
+          %input{:name => 'case[Subject]', :value => ''}
         .field
           %label Description 
           %textarea{:name => 'case[Description]'}
-            = @case['Description']
+            = ''
         .field
           %input{:type => 'submit'}
 
