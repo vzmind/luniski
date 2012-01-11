@@ -2,7 +2,7 @@
   .grid_8.alpha.omega
     .full_posts
       .form
-        = form_tag('/cases/new', :method => :get)
+        = form_tag('/cases', :method => :post)
         .field
           %label Subject 
           %input{:name => 'case[Subject]', :value => @case['Subject']}
