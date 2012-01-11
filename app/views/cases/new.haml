@@ -1,0 +1,23 @@
+.grid_8
+  .grid_8.alpha.omega
+    .full_posts
+      .form
+        = form_tag('/cases/new', :method => :get)
+        .field
+          %label Subject 
+          %input{:name => 'case[Subject]', :value => @case['Subject']}
+        .field
+          %label Description 
+          %textarea{:name => 'case[Description]'}
+            = @case['Description']
+        .field
+          %input{:type => 'submit'}
+
+  .clear
+- content_for :sidebar do
+  .grid_4
+    = render 'shared/sidebar'
+  / grid_4
+  .clear
+
+
