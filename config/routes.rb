@@ -2,6 +2,7 @@ EvDemo::Application.routes.draw do
   root :to => 'home#index'
   
   resources :cases
+  resources :solutions
 
   get "sessions/create"
 
