@@ -1,9 +1,9 @@
 # databasedotcom.yml
 #
 ---
-# Sandbox EV
-client_secret: '3261162599500258133'
-client_id: '3MVG9Gmy2zmPB01rlpzY39G2MTkUYUIaKmxVeMPWjR1BUJvhC5v8fTwdX0oG9KWOXisBCJwa2ATBjZUoA4wFA'
+# Sandbox Luniski
+client_secret: '9087131891700602362'
+client_id: '3MVG9rFJvQRVOvk4936qVmFb9yyqpKBv0xh6o2nRfVLIqe67HWcos1kAN9dSIB1nFMpVYULGrx74WtcL5SWur'
 # dedicated ORG Oxala
 #client_secret: '8086027360834568335'
 #client_id: '3MVG9QDx8IX8nP5RirhqQ1R8GjMpb7AFTFW5nuMKiw7eGYugiyRPrBHHrHRIcMPHu2caVhuwjb2fBmuGWMZQs'
