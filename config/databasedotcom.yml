@@ -1,8 +1,10 @@
 # databasedotcom.yml
 #
 ---
-client_secret: '8086027360834568335'
-client_id: '3MVG9QDx8IX8nP5RirhqQ1R8GjMpb7AFTFW5nuMKiw7eGYugiyRPrBHHrHRIcMPHu2caVhuwjb2fBmuGWMZQs'
-#client_id: '3MVG9PhR6g6B7ps6in8a_o8S1Ip1iiDMK828FkdlmF4XnBbv9Ek6CXfSjQzji5eJimP4yOWPS76bmJcZidCFP'
-#client_secret: '2041292024636461725'
+# Sandbox Luniski
+client_secret: '9087131891700602362'
+client_id: '3MVG9rFJvQRVOvk4936qVmFb9yyqpKBv0xh6o2nRfVLIqe67HWcos1kAN9dSIB1nFMpVYULGrx74WtcL5SWur'
+# dedicated ORG Oxala
+#client_secret: '8086027360834568335'
+#client_id: '3MVG9QDx8IX8nP5RirhqQ1R8GjMpb7AFTFW5nuMKiw7eGYugiyRPrBHHrHRIcMPHu2caVhuwjb2fBmuGWMZQs'
 
