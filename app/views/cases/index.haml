@@ -15,12 +15,8 @@
               %p
                 = c['Description']
               %p.actions
-                %a{:href => case_path(c['Id'])}
-                  Show
                 %a{:href => edit_case_path(c['Id'])}
                   Edit
-                %a
-                  Close
               .clear
   .clear
 - content_for :sidebar do
