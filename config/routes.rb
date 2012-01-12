@@ -3,6 +3,7 @@ EvDemo::Application.routes.draw do
   
   resources :cases
   resources :solutions
+  resources :leads
 
   get "sessions/create"
 

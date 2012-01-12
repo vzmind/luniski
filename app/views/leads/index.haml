@@ -1,0 +1,59 @@
+.grid_8
+  .grid_8.alpha.omega
+    .full_posts
+      %ul
+        %li
+          .form
+            = form_tag{:action=>"https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", :method=>"POST"}
+
+            %input{:type=>"hidden", :name=>"oid", :value=>"00Dd0000000bt0I"}
+            %input{:type=>"hidden", :name=>"retURL", :value=>"http://luniski.herokuapp.com/home"}
+
+            .field
+              %label{:for=>"first_name"}
+                First Name
+              %input{:id=>"first_name", :maxlength=>"40", :name=>"first_name", :size=>"20", :type=>"text"}
+              %br
+
+            .field
+              %label{:for=>"last_name"}
+                Last Name
+              %input{:id=>"last_name", :maxlength=>"40", :name=>"last_name", :size=>"20", :type=>"text"}
+              %br
+
+            .field
+              %label{:for=>"email"}
+                Email
+              %input{:id=>"email", :maxlength=>"40", :name=>"email", :size=>"20", :type=>"text"}
+              %br
+
+            .field
+              %label{:for=>"city"}
+                City
+              %input{:id=>"city", :maxlength=>"40", :name=>"city", :size=>"20", :type=>"text"}
+              %br
+
+            .field
+              %label{:for=>"state"}
+                State
+              %input{:id=>"state", :maxlength=>"40", :name=>"state", :size=>"20", :type=>"text"}
+              %br
+
+            .field
+              %label{:for=>"description"}
+                Description
+              %textarea{::name=>"description"}
+              %br
+
+            .field
+              %input{:type => 'submit'}
+
+
+
+          .clear
+  .clear
+- content_for :sidebar do
+  .grid_4
+    = render 'shared/sidebar'
+  / grid_4
+  .clear
