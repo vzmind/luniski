@@ -4,7 +4,7 @@
       %ul
         %li
           .form
-            = form_tag{:action=>"https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", :method=>"POST"}
+            = form_tag("https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", :method=>"POST")
 
             %input{:type=>"hidden", :name=>"oid", :value=>"00Dd0000000bt0I"}
             %input{:type=>"hidden", :name=>"retURL", :value=>"http://luniski.herokuapp.com/home"}
