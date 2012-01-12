@@ -89,5 +89,6 @@ jQuery(document).ready(function() {
 			jQuery(this).css({background: 'url(images/button_bg.gif) repeat-x'});
 		}
 	);
+  jQuery("p.loading").remove();
 
 }); 

@@ -1,5 +1,7 @@
 .grid_8
   = render 'shared/slider'
+  %script{:type => "text/javascript", :charset => "utf-8"} 
+    jQuery("p.loading").remove();
   .grid_8.alpha.omega
     .post_columns
       %h4
